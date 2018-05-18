@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>趣味电脑知识竞赛</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>趣味电脑知识竞赛</h2>
+        <p class="time">本题剩余时间：<strong id="time"></strong>秒</p>
+        <hr />
+        <div class="question">
+            <p class="questions"></p>
+        </div>
+        <div class="click">
+            <form action="#" method="post">
+                <input type="submit" name="question" value="抽题" class="button">
+            </form>
+        </div>
+        <div class="support">技术支持：<a href="http://cfan.ahnu.edu.cn" target="_blank">安徽师范大学计算机爱好者协会</a></div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    //计时开始
+    var i;
+    i = 30;
+    remainTime();
+    function remainTime() {
+        if (i > 0 ) {
+            document.getElementById("time").innerHTML = --i;
+            setTimeout("remainTime()", 1000);
+        }
+        else {
+            alert("本题时间到！");
+        }
+    }
+
+</script>
+
+</html>
